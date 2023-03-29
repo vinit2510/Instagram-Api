@@ -3,6 +3,10 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def base():
+    return jsonify({'documentation': "https://github.com/vinit2510/Instagram-Api"})
+
 
 @app.route('/instagram/', methods=['GET'])
 def instagram_():
@@ -31,6 +35,10 @@ def instagram():
 
 
 def get_data(link, cookie=""):
+    
+    if "instagram" not in link:
+        return jsonify({'response': False, 'error': 'Not valid url', 'error_code': 13, 'documentation': "https://github.com/vinit2510/Instagram-Api"}), 400
+    
     url = link.split("?")[0] + "?__a=1&__d=dis"
 
     my_cookie = """replace_with_your_cookie"""
