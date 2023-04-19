@@ -16,7 +16,7 @@ Step 2: Go to Inspect> Network Tab> Refresh Page> Go to Name section <br/>
 Step 3: Go to Request Headers> Find "cookie" <br/>
 Step 4: Done <br/>
 
-Use: Cookie is used to get response from privite account. <br/>
+Use: Cookie is used to get response from private account. <br/>
 
 #
 **Json Response:** <br/> <br/>
